@@ -23,7 +23,7 @@ scene.add(ambientLight);
 
 const glTFLoader = new GLTFLoader();
 
-glTFLoader.load('src/assets/maxwell-the-cat-dingus/scene.gltf', async function (gltf) {
+glTFLoader.load('@/assets/maxwell-the-cat-dingus/scene.gltf', async function (gltf) {
     scene.add(gltf.scene);
     renderer.render( scene, camera );
     console.log(gltf);
