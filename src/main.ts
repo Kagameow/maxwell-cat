@@ -1,6 +1,7 @@
 import './style.css';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import maxwell from './assets/maxwell-the-cat-dingus/scene.gltf?url';
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -23,7 +24,7 @@ scene.add(ambientLight);
 
 const glTFLoader = new GLTFLoader();
 
-glTFLoader.load('@/assets/maxwell-the-cat-dingus/scene.gltf', async function (gltf) {
+glTFLoader.load(maxwell, async function (gltf) {
     scene.add(gltf.scene);
     renderer.render( scene, camera );
     console.log(gltf);
